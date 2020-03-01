@@ -10,8 +10,6 @@ $numerologin = $_SESSION['usuarioLogin'];
 	//Consultas SQL 
 include "sql/p/admin_professor/sql_p_administrativo_professor.php";
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

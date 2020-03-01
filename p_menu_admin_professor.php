@@ -1,10 +1,14 @@
 <?php
+
+include_once ("conexao.php");
 if (!isset($_SESSION)) {//Verificar se a sessão não já está aberta.
   session_start();}
   $dia = date("d/m/Y");
   $usuario_logado = $_SESSION['usuarioNome'];
   $numerologin = $_SESSION['usuarioLogin'];
+  $igreja_logada =   $_SESSION['usuarioIgreja'];
 
+  include "sql/p/admin_professor/sql_p_menu_admin_professor.php";
 
   ?>
   <!DOCTYPE html>
@@ -55,7 +59,7 @@ if (!isset($_SESSION)) {//Verificar se a sessão não já está aberta.
           <a href="sair.php" class="btn btn-danger">Sair</a>
 
         </nav>
-        <center><?php echo"$dia - $usuario_logado"; ?></center>
+        <center><?php echo"$dia - $usuario_logado - IASD $linha_result_igreja[1]"; ?></center>
 
         <div class="container-fluid">
           <div class="container theme-showcase" role="main">  
